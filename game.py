@@ -63,19 +63,19 @@ def draw (snake, ball, show_end_screen):
 
 def control(snake):
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_w] or keys[pygame.K_UP]:
+    if keys[pygame.K_UP]:
         if snake['direction'].x != 0:
             snake['direction'].x = 0
             snake['direction'].y = -10
-    elif keys[pygame.K_s] or keys[pygame.K_DOWN]:
+    elif keys[pygame.K_DOWN]:
         if snake['direction'].x != 0:
             snake['direction'].x = 0
             snake['direction'].y = 10
-    elif keys[pygame.K_a] or keys[pygame.K_LEFT]:
+    elif keys[pygame.K_LEFT]:
         if snake['direction'].y != 0:
             snake['direction'].x = -10
             snake['direction'].y = 0
-    elif keys[pygame.K_d] or keys[pygame.K_RIGHT]:
+    elif keys[pygame.K_RIGHT]:
         if snake['direction'].y != 0:
             snake['direction'].x = 10
             snake['direction'].y = 0
